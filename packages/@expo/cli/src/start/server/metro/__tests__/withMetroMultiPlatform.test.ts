@@ -261,15 +261,16 @@ describe(withExtendedResolver, () => {
       ],
       ['web', '/Users/path/to/expo/node_modules/react/index.js', './cjs/react.production.min.js'],
     ].forEach(([platform, originModulePath, targetModulePath]) => {
-      it(`resolves production react files to empty when bundling for development: (platform: ${platform}, import: ${targetModulePath})`, async () => {
+      it(`resolves production react files to the placeholder when bundling for development: (platform: ${platform}, import: ${targetModulePath})`, async () => {
         mockMinFs();
 
+        const getMetroBundler = getMetroBundlerGetter();
         const modified = withExtendedResolver(asMetroConfig({ projectRoot: '/root/' }), {
           isTsconfigPathsEnabled: false,
-          getMetroBundler: getMetroBundlerGetter(),
+          getMetroBundler,
         });
 
-        modified.resolver.resolveRequest!(
+        const result = modified.resolver.resolveRequest!(
           {
             ...getDefaultRequestContext(),
             dev: true,
@@ -279,6 +280,14 @@ describe(withExtendedResolver, () => {
           platform!
         );
 
+        expect(result).toEqual({
+          type: 'sourceFile',
+          filePath: '\0placeholder:react-production-build',
+        });
+        expect(getMetroBundler.mock.results[0]!.value.setVirtualModule).toHaveBeenCalledWith(
+          '\0placeholder:react-production-build',
+          expect.stringContaining('expo export')
+        );
         expect(getResolveFunc()).not.toHaveBeenCalled();
       });
     });

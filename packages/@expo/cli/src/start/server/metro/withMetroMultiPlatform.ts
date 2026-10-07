@@ -55,6 +55,8 @@ export type StrictResolverFactory = (
 // itself, while react-native core destructures `{AssetRegistry}` from its internal registry module.
 const ASSET_REGISTRY_SRC = `const assets=[];const registry={registerAsset:s=>assets.push(s),getAssetByID:s=>assets[s-1]};module.exports={registerAsset:registry.registerAsset,getAssetByID:registry.getAssetByID,AssetRegistry:registry};`;
 
+const REACT_PRODUCTION_PLACEHOLDER_SRC = `throw new Error(${JSON.stringify('This export was built for development but is running on a production server. Try exporting your app with `expo export` before starting the production server.')});`;
+
 interface PlatformExtensions {
   sourceExts: string[];
   unstable_conditionNames: string[];
@@ -480,8 +482,14 @@ export function withExtendedResolver(
         // /Users/path/to/expo/node_modules/react-refresh/runtime.js ./cjs/react-refresh-runtime.production.min.js
         // /Users/path/to/expo/node_modules/react-native/node_modules/scheduler/index.native.js ./cjs/scheduler.native.production.min.js
         // /Users/path/to/expo/node_modules/react-native/node_modules/react-is/index.js ./cjs/react-is.production.min.js
+        const virtualId = '\0placeholder:react-production-build';
+        const bundler = getMetroBundlerWithVirtualModules(getMetroBundler());
+        if (!bundler.hasVirtualModule(virtualId)) {
+          bundler.setVirtualModule(virtualId, REACT_PRODUCTION_PLACEHOLDER_SRC);
+        }
         return {
-          type: 'empty',
+          type: 'sourceFile',
+          filePath: virtualId,
         };
       }
       return null;

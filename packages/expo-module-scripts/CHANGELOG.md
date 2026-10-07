@@ -1,5 +1,12 @@
 # Changelog
 
+## 56.0.9
+
+### Patch Changes
+
+- Updated dependencies. ([#51215](https://github.com/expo/expo/pull/51215))
+  - jest-expo@58.0.9
+
 ## 56.0.8
 
 ### Patch Changes

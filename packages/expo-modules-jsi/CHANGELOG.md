@@ -1,5 +1,11 @@
 # Changelog
 
+## 58.0.10
+
+### Patch Changes
+
+- [iOS] Fix blocking `JavaScriptRuntime.execute` calls using a full CPU core while they wait for the JavaScript thread. ([#51129](https://github.com/expo/expo/pull/51129) by [@tsapeta](https://github.com/tsapeta))
+
 ## 58.0.9
 
 ### Patch Changes

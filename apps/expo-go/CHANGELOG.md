@@ -1,0 +1,68 @@
+# @expo/home
+
+## 0.0.2
+
+### Patch Changes
+
+- Updated dependencies. ([#50745](https://github.com/expo/expo/pull/50745), [#51082](https://github.com/expo/expo/pull/51082), [#51130](https://github.com/expo/expo/pull/51130), [#51163](https://github.com/expo/expo/pull/51163), [#51196](https://github.com/expo/expo/pull/51196), [#51185](https://github.com/expo/expo/pull/51185), [#49849](https://github.com/expo/expo/pull/49849), [#51161](https://github.com/expo/expo/pull/51161), [#51208](https://github.com/expo/expo/pull/51208))
+  - expo-audio@58.0.8
+  - expo-sqlite@58.0.11
+  - expo-dev-menu@58.0.11
+  - @expo/ui@58.0.15
+  - expo-router@58.0.17
+  - expo-location@58.0.13
+  - expo-sensors@58.0.3
+  - expo@58.0.7
+  - expo-video@58.0.8
+  - expo-age-range@58.0.2
+  - expo-apple-authentication@58.0.2
+  - expo-application@58.0.4
+  - expo-asset@58.0.13
+  - expo-background-fetch@58.0.10
+  - expo-background-task@58.0.10
+  - expo-battery@58.0.3
+  - expo-blob@58.0.3
+  - expo-blur@58.0.3
+  - expo-brightness@58.0.2
+  - expo-calendar@58.0.6
+  - expo-camera@58.0.9
+  - expo-cellular@58.0.2
+  - expo-clipboard@58.0.3
+  - expo-constants@58.0.10
+  - expo-contacts@58.0.6
+  - expo-crypto@58.0.5
+  - expo-device@58.0.5
+  - expo-document-picker@58.0.4
+  - expo-font@58.0.7
+  - expo-gl@58.0.3
+  - expo-haptics@58.0.5
+  - expo-hinge@58.0.0
+  - expo-image-manipulator@58.0.13
+  - expo-image-picker@58.0.10
+  - expo-intent-launcher@58.0.3
+  - expo-linear-gradient@58.0.3
+  - expo-linking@58.0.11
+  - expo-live-photo@58.0.4
+  - expo-local-authentication@58.0.2
+  - expo-localization@58.0.3
+  - expo-mail-composer@58.0.3
+  - expo-media-library@58.0.7
+  - expo-mesh-gradient@58.0.3
+  - expo-navigation-bar@58.0.4
+  - expo-network@58.0.3
+  - expo-notifications@58.1.1
+  - expo-print@58.0.5
+  - expo-screen-capture@58.0.5
+  - expo-screen-orientation@58.0.2
+  - expo-secure-store@58.0.2
+  - expo-sharing@58.0.15
+  - expo-sms@58.0.2
+  - expo-speech@58.0.3
+  - expo-splash-screen@58.0.6
+  - expo-store-review@58.0.2
+  - expo-system-ui@58.0.5
+  - expo-task-manager@58.0.11
+  - expo-tracking-transparency@58.0.2
+  - expo-updates@58.0.15
+  - expo-video-thumbnails@58.0.2
+  - expo-web-browser@58.0.6

@@ -1,5 +1,11 @@
 # Changelog
 
+## 58.0.9
+
+### Patch Changes
+
+- Remove the internal-only `expo-source` export condition. ([#51215](https://github.com/expo/expo/pull/51215) by [@kitten](https://github.com/kitten))
+
 ## 58.0.8
 
 ### Patch Changes

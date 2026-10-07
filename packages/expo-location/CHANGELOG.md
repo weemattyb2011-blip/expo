@@ -1,5 +1,11 @@
 # Changelog
 
+## 58.0.13
+
+### Patch Changes
+
+- Add the TypeScript API layer for `expo-location/next`. ([#49849](https://github.com/expo/expo/pull/49849) by [@Wenszel](https://github.com/Wenszel))
+
 ## 58.0.12
 
 ### Patch Changes

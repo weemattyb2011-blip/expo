@@ -1,5 +1,14 @@
 # Changelog
 
+## 58.0.17
+
+### Patch Changes
+
+- Fix the dev server error page for routes that throw during server rendering, which showed an "Internal Error" instead of the error overlay. ([#51185](https://github.com/expo/expo/pull/51185) by [@ramonclaudio](https://github.com/ramonclaudio))
+- Updated dependencies.
+  - @expo/log-box@58.0.12
+  - @expo/metro-runtime@58.0.14
+
 ## 58.0.16
 
 ### Patch Changes

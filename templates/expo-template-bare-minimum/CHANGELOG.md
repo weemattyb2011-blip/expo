@@ -1,5 +1,12 @@
 # expo-template-bare-minimum
 
+## 58.0.16
+
+### Patch Changes
+
+- Updated dependencies.
+  - expo@58.0.7
+
 ## 58.0.15
 
 ### Patch Changes
